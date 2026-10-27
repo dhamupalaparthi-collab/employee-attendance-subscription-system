@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+            <h2>Admin</h2>
+            <a href="/manage_employees">Manage employees</a>
+            <a href="/manage_subscriptions">Manage subscriptions</a>
+            <a href="/attendance">View attendance</a>
+            <a href="/employee_requests">Requests from employees</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+        <div class="main">
+            <div class="card">
+                <h2>Edit subscription</h2>
+                <p class="hint">Step 2: enter the new name and password for this subscription.</p>
+
+                <form action="/edit_subscription" method="POST" autocomplete="off">
+                    <input type="hidden" name="step" value="2">
+                    <input type="hidden" name="old_name" value="{{OLD_NAME}}">
+
+                    <input name="new_name" placeholder="New subscription name" required>
+                    <input name="new_password" type="password" placeholder="New subscription password" required>
+
+                    <button type="submit">Save changes</button>
+                </form>
+
+                <p class="back-link"><a href="/edit_subscription">Pick a different subscription</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

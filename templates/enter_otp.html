@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="card center-box">
+
+            <h2>Enter OTP</h2>
+            <p class="hint">Enter the 6-digit code sent to your email to login.</p>
+
+            <form action="/verify_login_otp" method="POST" autocomplete="off">
+                <input name="otp" placeholder="OTP" required inputmode="numeric" pattern="[0-9]{6}">
+                <button>Verify and Login</button>
+            </form>
+
+            <p class="back-link"><a href="/">Back</a></p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

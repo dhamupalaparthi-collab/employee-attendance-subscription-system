@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+            <div class="profile-widget">
+                <img src="{{PHOTO}}" alt="Profile Photo" class="sidebar-profile-photo" id="profilePhotoToggle">
+                <h3>{{USERNAME}}</h3>
+                <div id="photoFormContainer" class="profile-photo-form-container" style="display: none;">
+                    <form action="/change_profile_photo" method="POST" enctype="multipart/form-data" class="profile-photo-form">
+                        <input type="file" name="photo" accept="image/*" required>
+                        <button type="submit">Change photo</button>
+                    </form>
+                </div>
+            </div>
+
+            <h2>Employee</h2>
+
+            <a href="/mark_attendance">Mark attendance</a>
+            <a href="/view_subscriptions">View subscriptions</a>
+            <a href="/request_subscription">Request subscription</a>
+            <a href="/view_my_attendance">View my attendance</a>
+            <a href="/request_holiday">Request holiday</a>
+            <a href="/change_weekly_holiday">Change weekly holiday</a>
+            <a href="/logout">Logout</a>
+
+        </div>
+
+        <div class="main">
+            <div class="card">
+                <h2>Employee dashboard</h2>
+                <p>Welcome. Mark attendance or view the subscriptions assigned to your account.</p>
+                <p>Your weekly holiday: <strong>{{WEEKLY_HOLIDAY}}</strong></p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById('profilePhotoToggle').addEventListener('click', function() {
+            var container = document.getElementById('photoFormContainer');
+            container.style.display = container.style.display === 'none' ? 'flex' : 'none';
+        });
+    </script>
+
+</body>
+
+</html>

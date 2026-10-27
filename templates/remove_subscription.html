@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+            <h2>Admin</h2>
+            <a href="/manage_employees">Manage employees</a>
+            <a href="/manage_subscriptions">Manage subscriptions</a>
+            <a href="/attendance">View attendance</a>
+            <a href="/employee_requests">Requests from employees</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+        <div class="main">
+            <div class="card">
+                <h2>Remove subscription</h2>
+                <p class="hint">Choose a subscription to delete. Employees will lose access to it.</p>
+
+                <form action="/remove_subscription" method="POST" autocomplete="off">
+                    <label>Subscription</label>
+                    <select name="name" required>{{SUB_OPTIONS}}</select>
+                    <button type="submit">Remove</button>
+                </form>
+
+                <p class="back-link"><a href="/manage_subscriptions">Back</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

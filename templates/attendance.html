@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+            <h2>Admin</h2>
+            <a href="/manage_employees">Manage employees</a>
+            <a href="/manage_subscriptions">Manage subscriptions</a>
+            <a href="/attendance">View attendance</a>
+            <a href="/employee_requests">Requests from employees</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+        <div class="main">
+            <div class="card">
+                <h2>View attendance</h2>
+                <p class="hint">Select an employee to see their attendance calendar for the current year up to today.</p>
+
+                <form action="/attendance" method="POST" autocomplete="off">
+                    <label>Employee</label>
+                    <select name="username" required>{{EMP_OPTIONS}}</select>
+                    <button type="submit">View calendar</button>
+                </form>
+
+                <div class="result-block">{{RESULT}}</div>
+
+                <p class="back-link"><a href="/admin">Back to dashboard</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

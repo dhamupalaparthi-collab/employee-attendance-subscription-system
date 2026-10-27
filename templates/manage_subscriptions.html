@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+            <h2>Admin</h2>
+            <a href="/manage_employees">Manage employees</a>
+            <a href="/manage_subscriptions">Manage subscriptions</a>
+            <a href="/attendance">View attendance</a>
+            <a href="/employee_requests">Requests from employees</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+        <div class="main">
+            <div class="card">
+                <h2>Manage subscriptions</h2>
+
+                <div class="btn-row">
+                    <a href="/add_subscription"><button type="button">Add subscription</button></a>
+                    <a href="/remove_subscription"><button type="button">Remove subscription</button></a>
+                    <a href="/edit_subscription"><button type="button">Edit subscription</button></a>
+                </div>
+
+                <table>
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                    {{DATA}}
+                </table>
+
+                <p class="back-link"><a href="/admin">Back to dashboard</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+            <h2>Admin</h2>
+            <a href="/manage_employees">Manage employees</a>
+            <a href="/manage_subscriptions">Manage subscriptions</a>
+            <a href="/attendance">View attendance</a>
+            <a href="/employee_requests">Requests from employees</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+        <div class="main">
+            <div class="card">
+                <h2>Manage subscriptions for employee</h2>
+                <p class="hint">Pick an employee and click Load to see their current access. Then adjust checkboxes and save.</p>
+
+                <form method="GET" action="/manage_employee_subscriptions" class="inline-form" autocomplete="off">
+                    <label>Employee</label>
+                    <select name="username" required>{{EMP_OPTIONS}}</select>
+                    <button type="submit">Load</button>
+                </form>
+
+                <form action="/manage_employee_subscriptions" method="POST" autocomplete="off">
+                    <label>Employee (confirm username)</label>
+                    <select name="username" required>{{EMP_OPTIONS}}</select>
+
+                    <label>Allowed subscriptions</label>
+                    <div class="sub-box">{{SUB_CHECKS}}</div>
+
+                    <button type="submit">Save subscriptions</button>
+                </form>
+
+                <p class="back-link"><a href="/manage_employees">Back</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="card center-box">
+
+            <div class="login-header">
+                <div class="user-icon"></div>
+                <h2>Login</h2>
+                <p>Welcome to your employee portal. Sign in with your password or request an OTP.</p>
+            </div>
+
+            <form action="/login" method="POST" autocomplete="off">
+                <input name="username" placeholder="Username" required autocomplete="off">
+                <input name="password" type="password" placeholder="Password" required autocomplete="off">
+                <button>Login with Password</button>
+            </form>
+
+            <hr>
+
+            <form action="/login_otp" method="POST" autocomplete="off">
+                <input name="username" placeholder="Username" required autocomplete="off">
+                <button>Send OTP to Email</button>
+            </form>
+
+            <p class="forgot-nav"><a href="/forgot-password">Forgot password?</a></p>
+            <p class="create-nav"><a href="/create_account">Create Account</a></p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

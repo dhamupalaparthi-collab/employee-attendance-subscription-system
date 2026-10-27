@@ -1,0 +1,26 @@
+# Build and generated binaries
+build/
+output/
+*.exe
+*.o
+
+# Local databases and backups
+*.db
+*.db-*
+*.db.backup
+*.sqlite
+*.sqlite3
+
+# Runtime uploads and personal data
+uploads/*
+!uploads/.gitkeep
+
+# Local Python environment
+.venv/
+__pycache__/
+*.py[cod]
+
+# Local secrets and environment files
+.env
+.env.*
+!.env.example

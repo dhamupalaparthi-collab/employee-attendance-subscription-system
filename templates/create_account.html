@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="card center-box">
+
+            <h2>Create Account</h2>
+
+            <form action="/create_account" method="POST" enctype="multipart/form-data" autocomplete="off">
+                <input name="username" placeholder="Username" required autocomplete="off">
+                <input name="password" type="password" placeholder="Password" required autocomplete="new-password">
+                <input name="email" type="email" placeholder="Email" required autocomplete="off">
+                <input name="role" placeholder="Role" required autocomplete="off">
+                <label>Weekly Holiday</label>
+                <select name="weekly_holiday" required>
+                    <option value="Sunday">Sunday</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                </select>
+                <label>Profile Photo</label>
+                <input type="file" name="photo" accept="image/*" required>
+                <button>Create Account</button>
+            </form>
+
+            <p class="back-link"><a href="/">Back to Login</a></p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

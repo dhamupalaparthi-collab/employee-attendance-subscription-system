@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+            <h2>Employee</h2>
+            <a href="/mark_attendance">Mark attendance</a>
+            <a href="/view_subscriptions">View subscriptions</a>
+            <a href="/request_subscription">Request subscription</a>
+            <a href="/view_my_attendance">View my attendance</a>
+            <a href="/request_holiday">Request holiday</a>
+            <a href="/change_weekly_holiday">Change weekly holiday</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+        <div class="main">
+            <div class="card">
+                <h2>My Attendance</h2>
+                <p class="hint">Your attendance calendar for the current year up to today. Green cells show days you marked present.</p>
+
+                <div class="result-block">{{CALENDAR}}</div>
+
+                <p class="back-link"><a href="/employee">Back to dashboard</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

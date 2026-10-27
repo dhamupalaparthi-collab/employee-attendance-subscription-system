@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+            <h2>Admin</h2>
+            <a href="/manage_employees">Manage employees</a>
+            <a href="/manage_subscriptions">Manage subscriptions</a>
+            <a href="/attendance">View attendance</a>
+            <a href="/employee_requests">Requests from employees</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+        <div class="main">
+            <div class="card">
+                <h2>Requests from Employees</h2>
+                <p class="hint">All pending requests are displayed below. Click View request to see details and respond.</p>
+
+                <div style="overflow-x: auto; margin-bottom: 20px;">
+                <table style="width: 100%;">
+                    <tr><th>Employee</th><th>Action</th></tr>
+                    {{REQUEST_ROWS}}
+                </table>
+                </div>
+
+                <div class="card" style="padding: 18px; margin-top: 16px; background: #f9fafb; border: 1px solid #e2e8f0;">
+                    <h3>Request details</h3>
+                    {{REQUEST_DETAIL}}
+                </div>
+
+                <p class="back-link"><a href="/admin">Back</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+            <h2>Employee</h2>
+            <a href="/mark_attendance">Mark attendance</a>
+            <a href="/view_subscriptions">View subscriptions</a>
+            <a href="/request_subscription">Request subscription</a>
+            <a href="/view_my_attendance">View my attendance</a>
+            <a href="/request_holiday">Request holiday</a>
+            <a href="/change_weekly_holiday">Change weekly holiday</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+        <div class="main">
+            <div class="card">
+                <h2>Subscriptions available to you</h2>
+
+                <table>
+                    <tr>
+                        <th>Subscription</th>
+                        <th>Password</th>
+                    </tr>
+                    {{DATA}}
+                </table>
+
+                <p class="back-link"><a href="/employee">Back to dashboard</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+            <h2>Employee</h2>
+            <a href="/mark_attendance">Mark attendance</a>
+            <a href="/view_subscriptions">View subscriptions</a>
+            <a href="/request_subscription">Request subscription</a>
+            <a href="/view_my_attendance">View my attendance</a>
+            <a href="/request_holiday">Request holiday</a>
+            <a href="/change_weekly_holiday">Change weekly holiday</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+        <div class="main">
+            <div class="card">
+                <h2>Change Weekly Holiday</h2>
+                <p class="hint">Submit a change request for your weekly holiday.</p>
+
+                <form action="/change_weekly_holiday" method="POST" autocomplete="off">
+                    <label>New weekly holiday</label>
+                    <select name="new_holiday" required>
+                        <option value="">Select a day</option>
+                        <option value="Sunday">Sunday</option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                    </select>
+
+                    <button type="submit">Submit change request</button>
+                </form>
+
+                <div class="status-message">
+                    {{STATUS}}
+                </div>
+
+                <p class="back-link"><a href="/employee">Back</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

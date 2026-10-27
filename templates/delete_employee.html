@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+            <h2>Admin</h2>
+            <a href="/manage_employees">Manage employees</a>
+            <a href="/manage_subscriptions">Manage subscriptions</a>
+            <a href="/attendance">View attendance</a>
+            <a href="/employee_requests">Requests from employees</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+        <div class="main">
+            <div class="card">
+                <h2>Delete employee</h2>
+
+                <form action="/delete_employee" method="POST" autocomplete="off">
+                    <label>Employee</label>
+                    <select name="username" required>{{EMP_OPTIONS}}</select>
+                    <button type="submit">Delete</button>
+                </form>
+
+                <p class="back-link"><a href="/manage_employees">Back</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

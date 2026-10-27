@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+            <h2>Admin</h2>
+            <a href="/manage_employees">Manage employees</a>
+            <a href="/manage_subscriptions">Manage subscriptions</a>
+            <a href="/attendance">View attendance</a>
+            <a href="/employee_requests">Requests from employees</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+        <div class="main">
+            <div class="card">
+                <h2>Manage employees</h2>
+
+                <div class="btn-row">
+                    <a href="/add_employee"><button type="button">Add employee</button></a>
+                    <a href="/manage_employee_subscriptions"><button type="button">Manage subscriptions for employee</button></a>
+                    <a href="/change_password"><button type="button">Change employee login password</button></a>
+                    <a href="/edit_employee"><button type="button">Change employee role</button></a>
+                    <a href="/delete_employee"><button type="button">Delete employee</button></a>
+                </div>
+
+                <table>
+                    <tr>
+                        <th style="width: 80px;">Photo</th>
+                        <th>Username</th>
+                        <th>Role</th>
+                    </tr>
+                    {{DATA}}
+                </table>
+
+                <p class="back-link"><a href="/admin">Back to dashboard</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
